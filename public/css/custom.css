@@ -1,0 +1,194 @@
+/* Add here all your CSS customizations */
+.view_title{
+    font-family: 'Parisienne', cursive;
+}
+
+.menu-text{
+    font-size: 14px;
+    text-transform: capitalize !important;
+    font-weight: normal;
+}
+
+.niggi{
+    color: red;
+}
+
+.sec-1{
+    background-color: #1e7e34;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /*padding-top: 100px;*/
+    /*padding-bottom: 100px;*/
+}
+
+.sec-1-button{
+    height: 150px;
+    width: 150px;
+    border: solid 2px #212528;
+    border-radius: 50%;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sec-2-button{
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sec-3-button{
+    height: 150px;
+    width: 150px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sec-1-text{
+
+}
+
+.sec-2-text{
+    color: white;
+}
+
+.sec-2{
+    background-color: #212528;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sec-3{
+    background-color: brown;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sec-video{
+
+}
+
+
+
+.sec-4{
+    background-color: red;
+}
+.sec-5{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #212528;
+}
+.sec-6{
+    background-color: yellow;
+}
+
+
+
+.magazine-item{
+
+    transition: all 0.3s ease;
+}
+
+.magazine-item:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+
+    transition: all 0.3s ease;
+}
+
+
+.center-container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-dark-grey{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: darkgrey;
+}
+
+.bg-grey{
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: grey;
+}
+
+.table{
+    margin-bottom: 0;
+}
+
+.price-panel{
+
+    /*padding-left: 4px!important;*/
+    /*padding-right: 4px!important;*/
+}
+
+/*.modal {*/
+    /*text-align: center;*/
+    /*padding: 0!important;*/
+/*}*/
+
+/*.modal:before {*/
+    /*content: '';*/
+    /*display: inline-block;*/
+    /*height: 100%;*/
+    /*vertical-align: middle;*/
+    /*margin-right: -4px;*/
+/*}*/
+
+/*.modal-dialog {*/
+    /*display: inline-block;*/
+    /*text-align: left;*/
+    /*vertical-align: middle;*/
+/*}*/
+
+.btn-pink{
+    background-color: #C84071;
+}
+
+.btn-pink:hover{
+    background-color: #C84071;
+}
+
+.text-xxs{
+    font-size: 12px;
+}
+
+.center-content{
+    vertical-align: middle;
+}
+
+.bg-pink{
+    background-color: #C84071;
+}
+
+.hover-pink:hover{
+    background-color: #C84071!important;
+    color: #FFFFFF!important;
+}
+
+.bg-blue{
+    background-color: #364158;
+}
+
+.bg-light-blue{
+    background-color: #0a83df;
+}
+
+
+.vcenter{
+    vertical-align: middle!important;
+}
