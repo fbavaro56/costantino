@@ -56,9 +56,21 @@ class WebController extends Controller
 
         $dates = Date::createDatesBetweenAddCourses($from,$to,$workshop->id);
 
+        $prev = [
+            'from' => Carbon::parse($from)->addDays(-7)->toDateString(),
+            'to' => Carbon::parse($from)->addDays(-1)->toDateString()
+        ];
+
+        $next = [
+            'from' => Carbon::parse($to)->addDay()->toDateString(),
+            'to' => Carbon::parse($to)->addDays(7)->toDateString()
+        ];
+
         return view('courses')
             ->with('workshop',$workshop)
             ->with('dates',$dates)
+            ->with('next',$next)
+            ->with('prev',$prev)
             ->with('active','workshops');
     }
 }

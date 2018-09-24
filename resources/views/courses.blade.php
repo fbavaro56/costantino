@@ -19,85 +19,98 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="table-responsive">
-                        <table class="table text-center">
-                            <thead>
-                            <tr class="bg-dark">
-                                <th></th>
-                                @foreach($dates as $date)
-                                    <th width="200px">
-                                        {{$date['day']}}
-                                        <br>
-                                        {{explode(',',\Carbon\Carbon::parse($date['date'])->toFormattedDateString())[0]}}
-                                    </th>
-                                @endforeach
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td class="bg-light-blue text-white vcenter">
-                                    Morning
-                                </td>
-                                @foreach($dates as $date)
-                                    <td class="vcenter">
-                                        <table class="table">
-                                            <tbody>
-                                            {{--por cada curso--}}
-                                            @foreach($date['courses'] as $course)
-                                                @if($course->hourRange === 'Morning')
-                                                    <tr>
-                                                        <button class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
+                    <div class="col-xs-1">
+                        <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$prev['from'].'/'.$prev['to'])}}">
+                            <i style="margin-top: 20px" class="fa fa-backward text-dark magazine-item text-lg control"></i>
+                        </a>
+                    </div>
+                    <div class="col-md-10">
+                        <div class="table-responsive">
+                            <table class="table text-center">
+                                <thead>
+                                <tr>
+                                    <th class="bg-dark"></th>
+                                    @foreach($dates as $date)
+                                        <th width="150px" class="@if($date['date'] === \Carbon\Carbon::now()->toDateString()) bg-pink text-white @else bg-dark @endif">
+                                            {{$date['day']}}
+                                            <br>
+                                            <span class="text-xxs">{{explode(',',\Carbon\Carbon::parse($date['date'])->toFormattedDateString())[0]}}</span>
+                                        </th>
+                                    @endforeach
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class=" vcenter">
+                                        <b>Morning</b>
+                                    </td>
+                                    @foreach($dates as $date)
+                                        <td class="vcenter">
+                                            <table class="table">
+                                                <tbody>
+                                                {{--por cada curso--}}
+                                                @foreach($date['courses'] as $course)
+                                                    @if($course->hourRange === 'Morning')
+                                                        <tr>
+                                                            <button class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
                                                             <span class="text-xxs @if($course->isAvailable) course-no-available @endif">
                                                                 <b>{{$course['title']}}</b>
                                                             </span>
-                                                            <br>
-                                                            <span class="text-xxs">{{$course->start}} to {{$course->end}}</span>
-                                                            <br>
-                                                            <span class="text-xxs">${{$course->price}}</span>
-                                                        </button>
-                                                    </tr>
-                                                @endif
-                                            @endforeach
-                                            </tbody>
-                                        </table>
+                                                                <br>
+                                                                <span class="text-xxs">{{$course->start}} to {{$course->end}}</span>
+                                                                <br>
+                                                                <span class="text-xxs">${{$course->price}}</span>
+                                                            </button>
+                                                        </tr>
+                                                    @endif
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    @endforeach
+                                </tr>
+                                <tr>
+                                    <td class="vcenter" style="min-height: 500px!important;">
+                                        <b>Evening</b>
                                     </td>
-                                @endforeach
-                            </tr>
-                            <tr>
-                                <td class="bg-blue text-white vcenter" style="min-height: 500px!important;">
-                                    Evening
-                                </td>
-                                @foreach($dates as $date)
-                                    <td>
-                                        <table class="table">
-                                            <tbody>
-                                            {{--por cada curso--}}
-                                            @foreach($date['courses'] as $course)
-                                                @if($course->hourRange === 'Evening')
-                                                    <tr>
-                                                        <button class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
+                                    @foreach($dates as $date)
+                                        <td>
+                                            <table class="table">
+                                                <tbody>
+                                                {{--por cada curso--}}
+                                                @foreach($date['courses'] as $course)
+                                                    @if($course->hourRange === 'Evening')
+                                                        <tr>
+                                                            <button class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
                                                             <span class="text-xxs @if($course->isAvailable) course-no-available @endif">
                                                                 <b>{{$course['title']}}</b>
                                                             </span>
-                                                            <br>
-                                                            <span class="text-xxs">{{$course->start}} to {{$course->end}}</span>
-                                                            <br>
-                                                            <span class="text-xxs">${{$course->price}}</span>
-                                                        </button>
-                                                    </tr>
-                                                @endif
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                @endforeach
-                            </tr>
-                            </tbody>
-                        </table>
+                                                                <br>
+                                                                <span class="text-xxs">{{$course->start}} to {{$course->end}}</span>
+                                                                <br>
+                                                                <span class="text-xxs">${{$course->price}}</span>
+                                                            </button>
+                                                        </tr>
+                                                    @endif
+                                                @endforeach
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    @endforeach
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-xs-1">
+                        <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$next['from'].'/'.$next['to'])}}">
+                            <i style="margin-top: 20px" class="fa fa-forward text-dark magazine-item text-lg control"></i>
+                        </a>
                     </div>
                 </div>
             </div>
 
+            <br><br><br><br><br>
         </div>
 
         @include('partials.footer')

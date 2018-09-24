@@ -159,6 +159,10 @@
     background-color: #C84071;
 }
 
+.text-pink{
+    color: #C84071;
+}
+
 .btn-pink:hover{
     background-color: #C84071;
 }
@@ -178,6 +182,10 @@
 .hover-pink:hover{
     background-color: #C84071!important;
     color: #FFFFFF!important;
+}
+
+.control:hover{
+    color: #C84071!important;
 }
 
 .bg-blue{
