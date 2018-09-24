@@ -19,7 +19,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-1">
+                    <div class="col-md-1 text-center">
                         <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$prev['from'].'/'.$prev['to'])}}">
                             <i style="margin-top: 20px" class="fa fa-backward text-dark magazine-item text-lg control"></i>
                         </a>
@@ -29,7 +29,7 @@
                             <table class="table text-center">
                                 <thead>
                                 <tr>
-                                    <th class="bg-dark"></th>
+                                    {{--<th class="bg-dark"></th>--}}
                                     @foreach($dates as $date)
                                         <th width="150px" class="@if($date['date'] === \Carbon\Carbon::now()->toDateString()) bg-pink text-white @else bg-dark @endif">
                                             {{$date['day']}}
@@ -41,9 +41,9 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td class=" vcenter">
-                                        <b>Morning</b>
-                                    </td>
+                                    {{--<td class=" vcenter">--}}
+                                        {{--<b>Morning</b>--}}
+                                    {{--</td>--}}
                                     @foreach($dates as $date)
                                         <td class="vcenter">
                                             <table class="table">
@@ -70,11 +70,11 @@
                                     @endforeach
                                 </tr>
                                 <tr>
-                                    <td class="vcenter" style="min-height: 500px!important;">
-                                        <b>Evening</b>
-                                    </td>
+                                    {{--<td class="vcenter" style="min-height: 500px!important;">--}}
+                                        {{--<b>Evening</b>--}}
+                                    {{--</td>--}}
                                     @foreach($dates as $date)
-                                        <td>
+                                        <td class="vcenter">
                                             <table class="table">
                                                 <tbody>
                                                 {{--por cada curso--}}
@@ -102,7 +102,7 @@
                             </table>
                         </div>
                     </div>
-                    <div class="col-xs-1">
+                    <div class="col-md-1 text-center">
                         <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$next['from'].'/'.$next['to'])}}">
                             <i style="margin-top: 20px" class="fa fa-forward text-dark magazine-item text-lg control"></i>
                         </a>

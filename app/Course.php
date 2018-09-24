@@ -13,7 +13,7 @@ class Course extends Model
      * @param $course
      */
     public static function getHourRange($course){
-        if($course->start <= '14:00:00'){
+        if($course->start < '14:00:00'){
             $course->hourRange = 'Morning';
         }else{
             $course->hourRange = 'Evening';
