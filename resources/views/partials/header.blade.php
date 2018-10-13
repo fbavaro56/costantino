@@ -35,7 +35,7 @@
                 <div class="header-column">
                     <div class="header-row">
                         <div class="header-logo">
-                            <a href="index.html">
+                            <a href="{{url('/')}}">
                                 <img alt="Porto" width="116" height="50" src="https://via.placeholder.com/116x50">
                             </a>
                         </div>

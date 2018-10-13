@@ -1,6 +1,9 @@
-/* Add here all your CSS customizations */
+
+
+
 .view_title{
     font-family: 'Parisienne', cursive;
+    /*font-family: 'Lato', sans-serif;*/
 }
 
 .menu-text{
@@ -14,7 +17,10 @@
 }
 
 .sec-1{
-    background-color: #1e7e34;
+    /*background-color: #1e7e34;*/
+    background-image: url(../img/cocina/eggs.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -58,13 +64,13 @@
 }
 
 .sec-2{
-    background-color: #212528;
+    background-color: #2E2C36;
     align-items: center;
     display: flex;
     justify-content: center;
 }
 .sec-3{
-    background-color: brown;
+    background-color: lightgray;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -76,16 +82,22 @@
 
 
 .sec-4{
-    background-color: red;
+    background-image: url(../img/cocina/acsc.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .sec-5{
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: #212528;
+    background-image: url(../img/cocina/work.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .sec-6{
-    background-color: yellow;
+    background-image: url(../img/cocina/sacs.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -156,15 +168,15 @@
 /*}*/
 
 .btn-pink{
-    background-color: #C84071;
+    background-color: #00AC9D;
 }
 
 .text-pink{
-    color: #C84071;
+    color: #00AC9D;
 }
 
 .btn-pink:hover{
-    background-color: #C84071;
+    background-color:#00AC9D;
 }
 
 .text-xxs{
@@ -176,16 +188,16 @@
 }
 
 .bg-pink{
-    background-color: #C84071;
+    background-color: #00AC9D;
 }
 
 .hover-pink:hover{
-    background-color: #C84071!important;
+    background-color: #00AC9D!important;
     color: #FFFFFF!important;
 }
 
 .control:hover{
-    color: #C84071!important;
+    color: #00AC9D!important;
 }
 
 .bg-blue{

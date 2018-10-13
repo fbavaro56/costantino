@@ -52,7 +52,7 @@
                                                 @foreach($date['courses'] as $course)
                                                     @if($course->hourRange === 'Morning')
                                                         <tr>
-                                                            <button class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
+                                                            <button onclick="window.location.replace('{{url('/course/view/'.$course->id.'/'.$date['date'])}}')" class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
                                                             <span class="text-xxs @if($course->isAvailable) course-no-available @endif">
                                                                 <b>{{$course['title']}}</b>
                                                             </span>
@@ -81,7 +81,7 @@
                                                 @foreach($date['courses'] as $course)
                                                     @if($course->hourRange === 'Evening')
                                                         <tr>
-                                                            <button class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
+                                                            <button onclick="window.location.replace('{{url('/course/view/'.$course->id.'/'.$date['date'])}}')"  class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
                                                             <span class="text-xxs @if($course->isAvailable) course-no-available @endif">
                                                                 <b>{{$course['title']}}</b>
                                                             </span>

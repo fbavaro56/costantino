@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Booking;
 use App\Course;
 use App\Date;
+use App\Http\Requests\Request;
 use App\Workshop;
 use Carbon\Carbon;
 
@@ -73,4 +75,37 @@ class WebController extends Controller
             ->with('prev',$prev)
             ->with('active','workshops');
     }
+
+
+    public function showCourse($course_id,$date){
+
+        $course = Course::find($course_id);
+
+        return view('course_details')
+            ->with('course',$course)
+            ->with('date',$date)
+            ->with('active','workshops');
+    }
+
+
+
+    public function bookingCourse(){
+
+        //TODO Validar datos
+        //TODO Verificar Disponibilidad, aforo
+
+        $booking = new Booking();
+        $booking->course_id = $_POST['course_id'];
+        $booking->date = $_POST['date'];
+        $booking->name = $_POST['name'];
+        $booking->email = $_POST['email'];
+        $booking->phone = $_POST['phone'];
+        $booking->comments = $_POST['comments'];
+        $booking->save();
+
+        //TODO avisar por email a admin
+
+        return $_POST;
+    }
+
 }

@@ -8,9 +8,9 @@
 
     <title>Te quiero cocinar</title>
 
-    <meta name="keywords" content="HTML5 Template" />
-    <meta name="description" content="Porto - Responsive HTML5 Template">
-    <meta name="author" content="okler.net">
+    <meta name="keywords" content="" />
+    <meta name="description" content="">
+    <meta name="author" content="fbavaro56.github.io">
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />

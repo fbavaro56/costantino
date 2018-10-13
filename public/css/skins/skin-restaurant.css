@@ -3651,8 +3651,8 @@ html[dir="rtl"] #header .tip-light:before {
 }
 
 html #header .header-top.header-top-primary {
-	background: #22252b;
-	border-top-color: #4a4b4f;
+	background: #2E2C36;
+	border-top-color: #2E2C36;
 }
 
 html #header .header-top.header-top-primary .header-nav-top ul > li.open > a {
@@ -5093,8 +5093,8 @@ html #footer.color-primary .footer-copyright {
 }
 
 html #footer.color-secondary {
-	background: #344257;
-	border-top-color: #344257;
+	background: #55535E;
+	border-top-color:#55535E;
 }
 
 html #footer.color-secondary .footer-ribbon {
@@ -5106,8 +5106,8 @@ html #footer.color-secondary .footer-ribbon:before {
 }
 
 html #footer.color-secondary .footer-copyright {
-	background: #2a3647;
-	border-top-color: #2a3647;
+	background: #322E39;
+	border-top-color: #322E39;
 }
 
 html #footer.color-tertiary {

@@ -19,6 +19,10 @@ Route::get('/', 'WebController@index');
 Route::get('/workshops', 'WebController@showWorkshops');
 Route::get('/workshops/{workshop_name}/courses/{from}/{to}', 'WebController@showCourses');
 
+Route::get('/course/view/{course_id}/{date}', 'WebController@showCourse');
+
+Route::post('/course/booking','WebController@bookingCourse');
+
 /**
  * admin
  */
