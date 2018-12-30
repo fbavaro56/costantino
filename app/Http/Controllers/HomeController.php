@@ -41,7 +41,9 @@ class HomeController extends Controller
 
 
     public function workshops(){
-        return 'Crud listado de workshops y acceso a listado de cursos de cada uno';
+        $workshops = Workshop::all();
+        return view('admin.workshops')
+            ->with('workshops',$workshops);
     }
 
     public function specialEvents(){
