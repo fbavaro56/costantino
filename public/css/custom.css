@@ -1,9 +1,14 @@
-
+@font-face {
+    font-family: 'Baron';
+    src:  url(fonts/Baron-Neue.otf) format('opentype');
+}
 
 
 .view_title{
-    font-family: 'Parisienne', cursive;
-    /*font-family: 'Lato', sans-serif;*/
+    /*font-family: 'Parisienne', cursive;*/
+    font-family: 'Baron';
+    letter-spacing: 15px;
+    text-transform: lowercase!important;
 }
 
 .menu-text{
@@ -56,11 +61,12 @@
 }
 
 .sec-1-text{
-
+    font-family: 'Baron';
 }
 
 .sec-2-text{
     color: white;
+    font-family: 'Baron';
 }
 
 .sec-2{
@@ -79,6 +85,10 @@
 
 }
 
+.sec-3-text{
+    font-family: 'Baron';
+}
+
 
 
 .sec-4{
@@ -90,9 +100,10 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background-image: url(../img/cocina/work.jpeg);
+    background-image: url(../img/cocina/ahumado.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Baron';
 }
 .sec-6{
     background-image: url(../img/cocina/sacs.jpeg);
@@ -211,4 +222,9 @@
 
 .vcenter{
     vertical-align: middle!important;
+}
+
+
+#map {
+    height: 300px;
 }

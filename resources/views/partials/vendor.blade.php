@@ -1,4 +1,5 @@
 <!-- Vendor -->
+
 <script src="vendor/jquery/jquery.min.js"></script>
 <script src="vendor/jquery.appear/jquery.appear.min.js"></script>
 <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -23,7 +24,7 @@
 <script src="vendor/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
 <!-- Current Page Vendor and Views -->
-<script src="js/views/view.contact.js"></script>
+{{--<script src="js/views/view.contact.js"></script>--}}
 
 
 <!-- Theme Custom -->

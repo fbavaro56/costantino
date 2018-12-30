@@ -23,8 +23,13 @@ Route::get('/course/view/{course_id}/{date}', 'WebController@showCourse');
 
 Route::post('/course/booking','WebController@bookingCourse');
 
+Route::get('/contact', 'WebController@contact');
+Route::get('/about', 'WebController@about');
+
 /**
  * admin
  */
 Route::auth();
 Route::get('/admin', 'HomeController@index');
+Route::get('/admin/workshops', 'HomeController@workshops');
+Route::get('/admin/special-events', 'HomeController@specialEvents');

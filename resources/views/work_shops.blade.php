@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="mt-5 mb-2 pt-3 view_title"><strong>W</strong>orkshops</h1>
+                        <h1 class="mt-5 mb-2 pt-3 view_title">workshops</h1>
                         <p class="text-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
 
                         <hr class="custom-divider">
@@ -22,7 +22,7 @@
                     <div class="container pb-5">
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="https://via.placeholder.com/600x400" class="img img-responsive" alt="">
+                                <img src="https://via.placeholder.com/600x400" class="img img-fluid" alt="">
                             </div>
                             <div class="col-sm-6 center-container" style="background-color: #FFFFFF">
                                 <div class="text-center">

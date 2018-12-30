@@ -108,4 +108,15 @@ class WebController extends Controller
         return $_POST;
     }
 
+
+    public function contact(){
+        return view('contact')
+            ->with('active','contact');
+    }
+
+    public function about(){
+        return view('about')
+            ->with('active','about');
+    }
+
 }

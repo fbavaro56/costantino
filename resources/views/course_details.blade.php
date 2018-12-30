@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="mt-5 mb-2 pt-3 view_title">{{$course->title}}</h1>
+                        <h1 class="mt-5 mb-2 pt-3 view_title"><span style="text-transform: lowercase">{{$course->title}}</span></h1>
                         <p class="text-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
                         <p class="text-3">
                             Date: <b>{{$date}}</b>

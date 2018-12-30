@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="mt-5 mb-2 pt-3 view_title"> <strong>{{$workshop['name'][0]}}</strong>{{substr($workshop['name'],1)}}</h1>
+                        <h1 class="mt-5 mb-2 pt-3 view_title" style="text-transform: lowercase">{{$workshop['name']}}</h1>
                         <p class="text-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
 
                         <hr class="custom-divider">
