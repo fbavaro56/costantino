@@ -64,8 +64,17 @@
     font-family: 'Baron';
 }
 
+.sec-1-text:hover{
+    text-decoration: none;
+}
+
 .sec-2-text{
     color: white;
+    font-family: 'Baron';
+}
+
+.sec-6-text{
+    color: #2E2C36;
     font-family: 'Baron';
 }
 
@@ -76,6 +85,9 @@
     justify-content: center;
 }
 .sec-3{
+    background-image: url(../img/cocina/unnamed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: lightgray;
     align-items: center;
     display: flex;
@@ -106,9 +118,13 @@
     font-family: 'Baron';
 }
 .sec-6{
-    background-image: url(../img/cocina/sacs.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /*background-image: url(../img/cocina/sacs.jpeg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: black;
 }
 
 
@@ -227,4 +243,13 @@
 
 #map {
     height: 300px;
+}
+
+.bajar{
+    margin-top: 30px;
+}
+
+
+.letter-space{
+    letter-spacing: 3px;
 }

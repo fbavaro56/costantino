@@ -69,4 +69,28 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+
+
+
+
+
+
+
+    /**
+     * FIXME borrar esto para permitir registro
+     */
+    public function showRegistrationForm()
+    {
+        return redirect('login');
+    }
+
+
+    /**
+     * FIXME borrar esto para permitir registro
+     */
+    public function register()
+    {
+
+    }
 }

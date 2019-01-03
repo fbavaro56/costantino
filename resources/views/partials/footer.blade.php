@@ -3,11 +3,9 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <ul class="social-icons mb-4">
-                    <li class="social-icons-instagram"><a href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
-                    <li class="social-icons-googleplus"><a href="http://www.google.com/" target="_blank" title="Google Plus"><i class="fab fa-google-plus-g"></i></a></li>
-                    <li class="social-icons-linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li class="social-icons-instagram"><a href="https://www.instagram.com/tequierococinar/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li class="social-icons-facebook"><a href="https://www.facebook.com/tequierococinar/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="social-icons-tripadvisor"><a href="http://www.tripadvisor.com/" target="_blank" title="Tripadvisor"><i class="fab fa-tripadvisor"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -16,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Street Name, Porto <span class="separator">|</span> <i class="fas fa-phone"></i> (123) 456-789 <span class="separator">|</span> <i class="far fa-envelope"></i> <a href="mailto:mail@example.com">mail@example.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> carrer taulat 74, 08005 barcelona. <span class="separator">|</span> <i class="fas fa-phone"></i> (+34) 697 25 96 58 <span class="separator">|</span> <i class="far fa-envelope"></i> <a href="mailto:tqcocinar@gmail.com">info@tequierococinar.com</a></p>
                 </div>
             </div>
         </div>

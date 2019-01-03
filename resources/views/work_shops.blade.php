@@ -12,7 +12,6 @@
                         <h1 class="mt-5 mb-2 pt-3 view_title">workshops</h1>
                         <p class="text-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
 
-                        <hr class="custom-divider">
                     </div>
                 </div>
             </div>
@@ -22,14 +21,14 @@
                     <div class="container pb-5">
                         <div class="row">
                             <div class="col-sm-6">
-                                <img src="https://via.placeholder.com/600x400" class="img img-fluid" alt="">
+                                <img src="{{asset('uploads/workshops/'.$workshop->id.'.jpg')}}" class="img img-fluid" alt="">
                             </div>
                             <div class="col-sm-6 center-container" style="background-color: #FFFFFF">
                                 <div class="text-center">
-                                    <h4>{{$workshop->name}}</h4>
-                                    <span>{{$workshop->duration}}h | from ${{$workshop->from_price}}</span>
+                                    <h4>{{$workshop['name'.$lang_floor]}}</h4>
+                                    <span>{{$workshop->duration}}h | {{trans('strings.from')}} €{{$workshop->from_price}}</span>
                                     <br>
-                                    <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$dates['from'].'/'.$dates['to'])}}" class="btn btn-dark magazine-item" style="margin-top: 20px">View more</a>
+                                    <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$dates['from'].'/'.$dates['to'].'/'.$lang)}}" class="btn btn-dark magazine-item text-capitalize" style="margin-top: 20px">{{trans('strings.view_more')}}</a>
                                 </div>
                             </div>
                         </div>

@@ -8,6 +8,7 @@ use App\Workshop;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Intervention\Image\Facades\Image;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $bookings = DB::table('bookings')->orderBy('date','desc')->paginate(20);
+        $bookings = DB::table('bookings')->orderBy('date','desc')->paginate(100);
         foreach ($bookings as $booking){
             $booking->course = Course::find($booking->course_id);
             $booking->workshop = Workshop::find($booking->course->workshop_id);
@@ -42,9 +43,66 @@ class HomeController extends Controller
 
     public function workshops(){
         $workshops = Workshop::all();
-        return view('admin.workshops')
+        return view('admin.workshops.workshops')
             ->with('workshops',$workshops);
     }
+
+
+    public function createWorkshop(){
+        return view('admin.workshops.create');
+    }
+
+    public function confirmWorkshop(Request $request){
+
+        $this->validate($request, [
+            'name' => 'required|unique:workshops|max:255',
+            'name_es' => 'required|unique:workshops|max:255',
+            'img_file' => 'required|mimes:jpg,jpeg,png',
+        ]);
+
+
+        $workshop = new Workshop();
+        $workshop->name = $request->input('name');
+        $workshop->name_es = $request->input('name_es');
+        $workshop->save();
+
+        $img = Image::make($request->file('img_file'));
+        $img->fit(800,600);
+        $img->save('uploads/workshops/'.$workshop->id.'.jpg');
+
+
+        return redirect('admin/workshops');
+    }
+
+    public function editWorkshop($workshop_id){
+
+        $workshop = Workshop::find($workshop_id);
+        return view('admin.workshops.edit')->with('workshop',$workshop);
+    }
+
+
+    public function updateWorkshop(Request $request){
+
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'name_es' => 'required|max:255',
+            'img_file' => 'required|mimes:jpg,jpeg,png',
+        ]);
+
+        $workshop = Workshop::find($request->input('workshop_id'));
+        $workshop->name = $request->input('name');
+        $workshop->name_es = $request->input('name_es');
+        $workshop->save();
+
+        $img = Image::make($request->file('img_file'));
+        $img->fit(800,600);
+        $img->save('uploads/workshops/'.$workshop->id.'.jpg');
+
+
+        return redirect('admin/workshops');
+    }
+
+
 
     public function specialEvents(){
 

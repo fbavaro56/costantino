@@ -9,10 +9,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <h1 class="mt-5 mb-2 pt-3 view_title" style="text-transform: lowercase">{{$workshop['name']}}</h1>
+                        <h1 class="mt-5 mb-2 pt-3 view_title" style="text-transform: lowercase">{{$workshop['name'.$lang_floor]}}</h1>
                         <p class="text-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
 
-                        <hr class="custom-divider">
                     </div>
                 </div>
             </div>
@@ -20,7 +19,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-1 text-center">
-                        <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$prev['from'].'/'.$prev['to'])}}">
+                        <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$prev['from'].'/'.$prev['to'].'/'.$lang)}}">
                             <i style="margin-top: 20px" class="fa fa-backward text-dark magazine-item text-lg control"></i>
                         </a>
                     </div>
@@ -52,14 +51,14 @@
                                                 @foreach($date['courses'] as $course)
                                                     @if($course->hourRange === 'Morning')
                                                         <tr>
-                                                            <button onclick="window.location.replace('{{url('/course/view/'.$course->id.'/'.$date['date'])}}')" class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
+                                                            <button onclick="window.location.replace('{{url('/course/view/'.$course->id.'/'.$date['date'].'/'.$lang)}}')" class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
                                                             <span class="text-xxs @if($course->isAvailable) course-no-available @endif">
-                                                                <b>{{$course['title']}}</b>
+                                                                <b>{{$course['title'.$lang_floor]}}</b>
                                                             </span>
                                                                 <br>
-                                                                <span class="text-xxs">{{$course->start}} to {{$course->end}}</span>
+                                                                <span class="text-xxs">{{$course->start}} {{trans('strings.to')}} {{$course->end}}</span>
                                                                 <br>
-                                                                <span class="text-xxs">${{$course->price}}</span>
+                                                                <span class="text-xxs">€{{$course->price}}</span>
                                                             </button>
                                                         </tr>
                                                     @endif
@@ -81,12 +80,12 @@
                                                 @foreach($date['courses'] as $course)
                                                     @if($course->hourRange === 'Evening')
                                                         <tr>
-                                                            <button onclick="window.location.replace('{{url('/course/view/'.$course->id.'/'.$date['date'])}}')"  class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
+                                                            <button onclick="window.location.replace('{{url('/course/view/'.$course->id.'/'.$date['date'].'/'.$lang)}}')"  class="btn @if($course->isAvailable)btn-light magazine-item hover-pink @endif"  @if(!$course->isAvailable) disabled @endif  style="margin-top: 10px">
                                                             <span class="text-xxs @if($course->isAvailable) course-no-available @endif">
-                                                                <b>{{$course['title']}}</b>
+                                                                <b>{{$course['title'.$lang_floor]}}</b>
                                                             </span>
                                                                 <br>
-                                                                <span class="text-xxs">{{$course->start}} to {{$course->end}}</span>
+                                                                <span class="text-xxs">{{$course->start}} {{trans('strings.to')}} {{$course->end}}</span>
                                                                 <br>
                                                                 <span class="text-xxs">${{$course->price}}</span>
                                                             </button>
@@ -103,7 +102,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 text-center">
-                        <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$next['from'].'/'.$next['to'])}}">
+                        <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$next['from'].'/'.$next['to'].'/'.$lang)}}">
                             <i style="margin-top: 20px" class="fa fa-forward text-dark magazine-item text-lg control"></i>
                         </a>
                     </div>

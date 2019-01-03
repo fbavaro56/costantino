@@ -16,15 +16,19 @@
  * Website
  */
 Route::get('/', 'WebController@index');
-Route::get('/workshops', 'WebController@showWorkshops');
-Route::get('/workshops/{workshop_name}/courses/{from}/{to}', 'WebController@showCourses');
+Route::get('home/{lang?}', 'WebController@index');
 
-Route::get('/course/view/{course_id}/{date}', 'WebController@showCourse');
+Route::get('/workshops/{lang?}', 'WebController@showWorkshops');
+Route::get('/workshops/{workshop_name}/courses/{from}/{to}/{lang?}', 'WebController@showCourses');
+
+Route::get('/course/view/{course_id}/{date}/{lang?}', 'WebController@showCourse');
 
 Route::post('/course/booking','WebController@bookingCourse');
 
-Route::get('/contact', 'WebController@contact');
-Route::get('/about', 'WebController@about');
+Route::get('/contact/{lang?}', 'WebController@contact');
+Route::get('/about/{lang?}', 'WebController@about');
+Route::get('/gallery/{lang?}', 'WebController@gallery');
+
 
 /**
  * admin
@@ -32,4 +36,14 @@ Route::get('/about', 'WebController@about');
 Route::auth();
 Route::get('/admin', 'HomeController@index');
 Route::get('/admin/workshops', 'HomeController@workshops');
+Route::get('/admin/workshops/create', 'HomeController@createWorkshop');
+Route::post('/admin/workshops/confirm', 'HomeController@confirmWorkshop');
+Route::get('/admin/workshops/edit/{workshop_id}', 'HomeController@editWorkshop');
+Route::post('/admin/workshops/update', 'HomeController@updateWorkshop');
+
+Route::get('/admin/courses/{workshop_id}', 'CoursesController@listCourses');
+Route::get('/admin/courses/create/{workshop_id}', 'CoursesController@create');
+Route::post('/admin/courses/confirm', 'CoursesController@confirm');
+
 Route::get('/admin/special-events', 'HomeController@specialEvents');
+

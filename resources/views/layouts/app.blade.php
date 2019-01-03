@@ -48,7 +48,7 @@
                 @else
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/admin') }}">Reservas</a></li>
-                        <li><a href="{{ url('/admin/workshops') }}">Talleres</a></li>
+                        <li><a href="{{ url('/admin/workshops') }}">Workshops</a></li>
                         <li><a href="{{ url('/admin/special-events') }}">Eventos Especiales</a></li>
 
                     </ul>
