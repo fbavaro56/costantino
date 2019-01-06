@@ -16,43 +16,11 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-md-4 bajar">
-                        <img src="https://via.placeholder.com/400" class="img-fluid" alt="">
-                    </div>
-
+                    @foreach($images as $image)
+                        <div class="col-md-4 bajar">
+                            <img src="{{asset('uploads/gallery/'.$image->name.'_'.$image->id.'.jpg')}}" class="img-fluid" alt="">
+                        </div>
+                    @endforeach
                 </div>
             </div>
 

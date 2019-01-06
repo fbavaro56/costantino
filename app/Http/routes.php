@@ -45,5 +45,10 @@ Route::get('/admin/courses/{workshop_id}', 'CoursesController@listCourses');
 Route::get('/admin/courses/create/{workshop_id}', 'CoursesController@create');
 Route::post('/admin/courses/confirm', 'CoursesController@confirm');
 
+Route::get('/admin/gallery', 'HomeController@gallery');
+Route::get('/admin/gallery/create', 'HomeController@galleryCreate');
+Route::post('/admin/gallery/confirm', 'HomeController@galleryConfirm');
+Route::get('/admin/gallery/delete/{id}', 'HomeController@galleryDelete');
+
 Route::get('/admin/special-events', 'HomeController@specialEvents');
 

@@ -50,6 +50,7 @@
                         <li><a href="{{ url('/admin') }}">Reservas</a></li>
                         <li><a href="{{ url('/admin/workshops') }}">Workshops</a></li>
                         <li><a href="{{ url('/admin/special-events') }}">Eventos Especiales</a></li>
+                        <li><a href="{{ url('/admin/gallery') }}">Galería</a></li>
 
                     </ul>
                 @endif

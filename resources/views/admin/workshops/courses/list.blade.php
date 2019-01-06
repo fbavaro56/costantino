@@ -27,6 +27,7 @@
                                 <th>Inicio</th>
                                 <th>Fin</th>
                                 <th>Día</th>
+                                <th>Status</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -45,6 +46,9 @@
                                     <td>{{$course->start}}</td>
                                     <td>{{$course->end}}</td>
                                     <td>{{$weekMap[$course->day_of_week]}}</td>
+                                    <td>
+                                        <!--TODO--><label><input type="checkbox" onclick="alert('revisamos staus y enviamos a back')" value="" checked></label>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>

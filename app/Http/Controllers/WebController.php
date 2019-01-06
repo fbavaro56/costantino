@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Booking;
 use App\Course;
 use App\Date;
+use App\Galleryimage;
 use App\Http\Requests\Request;
 use App\Workshop;
 use Carbon\Carbon;
@@ -278,8 +279,12 @@ class WebController extends Controller
             $lang = '';
         }
 
+
+        $imgs = Galleryimage::orderBy('id','desc')->get();
+
         return view('gallery')->with('active','gallery')
             ->with('lang_floor',$lang_floor)
+            ->with('images',$imgs)
             ->with('lang',$lang);
     }
 

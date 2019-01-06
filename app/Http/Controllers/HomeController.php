@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Course;
+use App\Galleryimage;
 use App\Http\Requests;
 use App\Workshop;
 use Carbon\Carbon;
@@ -100,13 +101,48 @@ class HomeController extends Controller
 
 
         return redirect('admin/workshops');
+
     }
 
 
 
     public function specialEvents(){
 
-        return 'Crud listado de eventos especiales';
+        return view('admin.special_events.list');
+
+    }
+
+
+    public function gallery(){
+
+        $images = Galleryimage::orderBy('id','desc')->get();
+        return view('admin.gallery.list')->with('images',$images);
+
+    }
+
+    public function galleryCreate(){
+
+        return view('admin.gallery.create');
+
+    }
+
+    public function galleryConfirm(Request $request){
+
+        $img_place = new Galleryimage();
+        $img_place->name = $request->input('name');
+        $img_place->save();
+
+        $img = Image::make($request->file('img_file'));
+        $img->fit(800,800);
+        $img->save('uploads/gallery/'.$img_place->name.'_'.$img_place->id.'.jpg');
+
+        return redirect('admin/gallery');
+    }
+
+
+    public function galleryDelete($id){
+        Galleryimage::find($id)->delete();
+        return redirect('admin/gallery');
     }
 
 
