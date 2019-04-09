@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-7" style="z-index: 1">
                     <div class="row buttons-special-section">
-                        <div class="col-sm-4 sec-1 magazine-item">
+                        <div class="col-sm-4 sec-1 magazine-item sec">
                             <a href="{{url('gallery/'.$lang)}}" style="text-decoration: none;">
                                 <div class="sec-1-button">
                                         <span class="sec-1-text letter-space">
@@ -18,7 +18,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-sm-4 sec-2 magazine-item">
+                        <div class="col-sm-4 sec-2 magazine-item sec">
                             <a href="{{url('about/'.$lang)}}" style="text-decoration: none;">
                                 <div class="sec-2-button">
                                     <span class="sec-2-text letter-space">
@@ -27,7 +27,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-sm-4 sec-3 magazine-item">
+                        <div class="col-sm-4 sec-3 magazine-item sec">
                             <a href="" style="text-decoration: none;">
                                 <div class="sec-3-button">
                                     <span class="sec-3-text letter-space text-center">
@@ -48,8 +48,8 @@
                 </div>
             </div>
             <div class="row buttons-special-section">
-                <div class="col-sm-5 sec-4"></div>
-                <div class="col-sm-5 sec-5 magazine-item" style="z-index: 1">
+                <div class="col-sm-5 sec-4 sec"></div>
+                <div class="col-sm-5 sec-5 magazine-item sec" style="z-index: 1">
                     <a href="{{url('workshops/'.$lang)}}" style="text-decoration: none;">
                         <div class="sec-2-button">
                                     <span class="sec-2-text letter-space">
@@ -58,7 +58,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-2 sec-6 magazine-item" style="z-index: 2">
+                <div class="col-sm-2 sec-6 magazine-item sec" style="z-index: 2">
                     <a href="{{url('contact/'.$lang)}}" style="text-decoration: none;">
                         <div class="sec-2-button">
                                     <span class="sec-6-text letter-space text-center">

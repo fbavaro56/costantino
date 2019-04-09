@@ -47,7 +47,11 @@
                                     <td>{{$course->end}}</td>
                                     <td>{{$weekMap[$course->day_of_week]}}</td>
                                     <td>
-                                        <!--TODO--><label><input type="checkbox" onclick="alert('revisamos staus y enviamos a back')" value="" checked></label>
+                                      @if ($course->status == 1)
+                                        <span style="color:green">Público</span>
+                                      @else
+                                        <span style="color:red">Oculto</span>
+                                      @endif
                                     </td>
                                 </tr>
                             @endforeach

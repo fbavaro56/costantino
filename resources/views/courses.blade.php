@@ -10,7 +10,9 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h1 class="mt-5 mb-2 pt-3 view_title" style="text-transform: lowercase">{{$workshop['name'.$lang_floor]}}</h1>
-                        <p class="text-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                        <p class="text-3">
+                            {{$workshop['description'.$lang_floor]}}
+                        </p>
 
                     </div>
                 </div>
@@ -87,7 +89,7 @@
                                                                 <br>
                                                                 <span class="text-xxs">{{$course->start}} {{trans('strings.to')}} {{$course->end}}</span>
                                                                 <br>
-                                                                <span class="text-xxs">${{$course->price}}</span>
+                                                                <span class="text-xxs">€{{$course->price}}</span>
                                                             </button>
                                                         </tr>
                                                     @endif

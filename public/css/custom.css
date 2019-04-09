@@ -22,6 +22,16 @@
     color: red;
 }
 
+@media (max-width: 767px) {
+    .sec{
+        min-height: 500px;
+    }
+
+    .sec-5{
+        margin-top: 500px;
+    }
+}
+
 .sec-1{
     /*background-color: #1e7e34;*/
     background-image: url(../img/cocina/eggs.jpeg);

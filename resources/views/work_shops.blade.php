@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <h1 class="mt-5 mb-2 pt-3 view_title">workshops</h1>
-                        <p class="text-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu pulvinar magna.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
 
                     </div>
                 </div>
@@ -23,9 +23,13 @@
                             <div class="col-sm-6">
                                 <img src="{{asset('uploads/workshops/'.$workshop->id.'.jpg')}}" class="img img-fluid" alt="">
                             </div>
-                            <div class="col-sm-6 center-container" style="background-color: #FFFFFF">
+                            <div class="col-sm-6 center-container" style="background-color: #FFFFFF;padding-left: 50px;padding-right: 50px;">
                                 <div class="text-center">
                                     <h4>{{$workshop['name'.$lang_floor]}}</h4>
+                                    <p class="text-justify">
+                                        {{$workshop['description'.$lang_floor]}}
+                                    </p>
+
                                     <span>{{$workshop->duration}}h | {{trans('strings.from')}} €{{$workshop->from_price}}</span>
                                     <br>
                                     <a href="{{url('/workshops/'.$workshop->name.'/courses/'.$dates['from'].'/'.$dates['to'].'/'.$lang)}}" class="btn btn-dark magazine-item text-capitalize" style="margin-top: 20px">{{trans('strings.view_more')}}</a>

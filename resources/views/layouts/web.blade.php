@@ -11,6 +11,7 @@
     <meta name="keywords" content="" />
     <meta name="description" content="">
     <meta name="author" content="fbavaro56.github.io">
+    <meta name="google-site-verification" content="9o9prNz7nmNNAcBW7yhw5GNaiwH0a3lkZJPCHaXRpfY" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}" type="image/x-icon" />

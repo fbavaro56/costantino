@@ -11,6 +11,7 @@ use App\Workshop;
 use Carbon\Carbon;
 use http\Env\Url;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Mail;
 
 class WebController extends Controller
 {
@@ -81,6 +82,14 @@ class WebController extends Controller
         foreach ($workshops as $workshop){
             Workshop::completeInfo($workshop);
         }
+
+        foreach ($workshops as $key => $workshop) {
+          if (sizeof($workshop->courses)< 1) {
+            unset($workshops{$key});
+          }
+        }
+
+        // return $workshops;
 
         return view('work_shops')
             ->with('workshops',$workshops)
@@ -156,7 +165,14 @@ class WebController extends Controller
         $course = Course::find($course_id);
 
         //TODO verificar aforo y limitar cantidad de personas segun id del curso y la fecha
+        //TODO crear fechas de bloqueo, para poder cerrar manualmente
+        $bookings = Booking::where('course_id','=',$course_id)
+                              ->where('date','=',$date)
+                              ->get();
 
+        $places = $course->quotas - sizeof($bookings);
+
+        // return $places;
         return view('course_details')
             ->with('course',$course)
             ->with('date',$date)
@@ -286,6 +302,25 @@ class WebController extends Controller
             ->with('lang_floor',$lang_floor)
             ->with('images',$imgs)
             ->with('lang',$lang);
+    }
+
+
+
+    public function contactSend(){
+
+
+        $msg = 'Enviado por: '.$_POST['name'].', email: '.$_POST['email'].' , Teléfono: '.$_POST['phone'].', Comentario: '.$_POST['comment'];
+
+        Mail::raw($msg, function($message)
+        {
+            $message->to('info@tequierococinar.com', 'Te quiero cocinar')->subject('Nuevo mensaje desde la web');
+            $message->to('fbavaro56@gmail.com', 'Te quiero cocinar')->subject('Nuevo mensaje desde la web');
+        });
+
+
+
+        return redirect()->back()->with('message','Mensaje enviado !');
+
     }
 
 }

@@ -68,6 +68,15 @@
                                 <label for="adults">{{trans('strings.adults')}}</label>
                                 <select name="adults" id="adults" class="form-control">
                                     <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
                                 </select>
                             </div>
                         </div>
@@ -75,7 +84,17 @@
                             <div class="form-group">
                                 <label for="kids">{{trans('strings.kids')}}</label>
                                 <select name="kids" id="kids" class="form-control">
+                                    <option value="0">0</option>
                                     <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
                                 </select>
                             </div>
                         </div>

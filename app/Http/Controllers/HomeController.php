@@ -65,6 +65,8 @@ class HomeController extends Controller
         $workshop = new Workshop();
         $workshop->name = $request->input('name');
         $workshop->name_es = $request->input('name_es');
+        $workshop->description = $request->input('description');
+        $workshop->description_es = $request->input('description_es');
         $workshop->save();
 
         $img = Image::make($request->file('img_file'));
@@ -87,17 +89,26 @@ class HomeController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255',
             'name_es' => 'required|max:255',
-            'img_file' => 'required|mimes:jpg,jpeg,png',
+            'img_file' => 'mimes:jpg,jpeg,png',
         ]);
 
         $workshop = Workshop::find($request->input('workshop_id'));
         $workshop->name = $request->input('name');
         $workshop->name_es = $request->input('name_es');
+        $workshop->description = $request->input('description');
+        $workshop->description_es = $request->input('description_es');
         $workshop->save();
 
-        $img = Image::make($request->file('img_file'));
-        $img->fit(800,600);
-        $img->save('uploads/workshops/'.$workshop->id.'.jpg');
+        $i = '';
+        $i = $request->file('img_file');
+
+        if($i != ''){
+            $img = Image::make($request->file('img_file'));
+            $img->fit(800,600);
+            $img->save('uploads/workshops/'.$workshop->id.'.jpg');
+        }
+
+
 
 
         return redirect('admin/workshops');

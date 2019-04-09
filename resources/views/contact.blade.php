@@ -28,7 +28,8 @@
                             </p>
                         </div>
                     </div>
-                    <form action="">
+                    <form action="{{url('contact/enviar')}}" method="post">
+                        {{csrf_field()}}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -59,6 +60,13 @@
                                     <button type="submit" class="btn btn-lg btn-default">Send</button>
                                 </div>
                             </div>
+                            @if(session('message'))
+                                <div class="col-md-12">
+                                    <div class="alert alert-success">
+                                        {{trans('strings.send_ok')}}
+                                    </div>
+                                </div>
+                            @endif
                         </div>
                     </form>
                 </div>

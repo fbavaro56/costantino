@@ -5,7 +5,7 @@
                 <ul class="social-icons mb-4">
                     <li class="social-icons-instagram"><a href="https://www.instagram.com/tequierococinar/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
                     <li class="social-icons-facebook"><a href="https://www.facebook.com/tequierococinar/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="social-icons-tripadvisor"><a href="http://www.tripadvisor.com/" target="_blank" title="Tripadvisor"><i class="fab fa-tripadvisor"></i></a></li>
+                    <li class="social-icons-tripadvisor"><a href="https://www.tripadvisor.es/Attraction_Review-g187497-d17209672-Reviews-Tequierococinar-Barcelona_Catalonia.html" target="_blank" title="Tripadvisor"><i class="fab fa-tripadvisor"></i></a></li>
                 </ul>
             </div>
         </div>

@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'info@tequierococinar.com', 'name' => 'Te quiero cocinar'],
 
     /*
     |--------------------------------------------------------------------------
@@ -108,5 +108,15 @@ return [
     */
 
     'sendmail' => '/usr/sbin/sendmail -bs',
+
+    // ESTO SE AGREGA PARA EVITAR VERIFICACIÓN SSL
+
+    'stream' => [
+        'ssl' => [
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true,
+        ],
+    ],
 
 ];

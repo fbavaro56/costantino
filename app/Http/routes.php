@@ -26,6 +26,8 @@ Route::get('/course/view/{course_id}/{date}/{lang?}', 'WebController@showCourse'
 Route::post('/course/booking','WebController@bookingCourse');
 
 Route::get('/contact/{lang?}', 'WebController@contact');
+Route::post('/contact/enviar', 'WebController@contactSend');
+
 Route::get('/about/{lang?}', 'WebController@about');
 Route::get('/gallery/{lang?}', 'WebController@gallery');
 
@@ -44,6 +46,8 @@ Route::post('/admin/workshops/update', 'HomeController@updateWorkshop');
 Route::get('/admin/courses/{workshop_id}', 'CoursesController@listCourses');
 Route::get('/admin/courses/create/{workshop_id}', 'CoursesController@create');
 Route::post('/admin/courses/confirm', 'CoursesController@confirm');
+Route::get('/admin/courses/edit/{course_id}', 'CoursesController@edit');
+Route::post('admin/courses/update', 'CoursesController@update');
 
 Route::get('/admin/gallery', 'HomeController@gallery');
 Route::get('/admin/gallery/create', 'HomeController@galleryCreate');
@@ -51,4 +55,3 @@ Route::post('/admin/gallery/confirm', 'HomeController@galleryConfirm');
 Route::get('/admin/gallery/delete/{id}', 'HomeController@galleryDelete');
 
 Route::get('/admin/special-events', 'HomeController@specialEvents');
-

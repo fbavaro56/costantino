@@ -47,4 +47,6 @@ return [
     'thanks' => "Thank you",
     'message' => 'Message',
 
+    'send_ok'  => 'Message sent, very soon we will get in touch with you'
+
 ];

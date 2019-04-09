@@ -40,9 +40,15 @@ class Workshop extends Model
      * @return mixed
      */
     public static function completeInfo($workshop){
-        $workshop->courses = Workshop::find($workshop->id)->courses;
-        $workshop->duration = Workshop::getDuration($workshop);
-        $workshop->from_price = Workshop::getFromPrice($workshop);
+        $workshop->courses = Workshop::find($workshop->id)->courses()->where('status','=',1)->get();
+        if (sizeof($workshop->courses)>0) {
+          $workshop->duration = Workshop::getDuration($workshop);
+          $workshop->from_price = Workshop::getFromPrice($workshop);
+        }else {
+          $workshop->duration = 0;
+          $workshop->from_price = 0;
+        }
+
         return $workshop;
     }
 }

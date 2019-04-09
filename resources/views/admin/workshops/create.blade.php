@@ -30,6 +30,14 @@
                                 <input type="text" name="name_es" class="form-control" id="name_es">
                             </div>
                             <div class="form-group">
+                                <label for="description">Descripción Ingles:</label>
+                                <textarea name="description" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="description_es">Descripción Español:</label>
+                                <textarea name="description_es" class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputFile">Imagen</label>
                                 <input type="file" name="img_file" required>
                                 <p class="help-block">JPG, JPEG, PNG. Se establecerá el tamaño de la imagen a 800x600 px</p>
